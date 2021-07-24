@@ -32,6 +32,18 @@ plugin-build:
 plugin-install: plugin-build
 	pip install scripts/eze-example-plugin-*.tar.gz
 
+# release to test pip
+release-pypi-test: plugin-build
+	twine upload --repository testpypi dist/*
+
+# release to test pip
+release-pypi: plugin-build
+	twine upload dist/*
+
+# release to test pip
+release-test: plugin-build
+	twine upload --repository testpypi dist/*
+
 ##############################################
 # BUILD SYSTEM COMMANDS
 ##############################################
