@@ -1,6 +1,6 @@
 # Introduction 
 
-Eze example plugin, provides a starter project for extending
+Eze example plugin, provides a starter project for extending the capabilities of Eze, by adding new security tools or report types.
 
 # Getting Started
 
