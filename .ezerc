@@ -1,0 +1,60 @@
+# ========================================
+# EXAMPLE PYTHON TOOL CONFIG
+# ========================================
+[python-bandit]
+SOURCE = "."
+REPORT_FILE = "reports/bandit-report.json"
+
+[python-piprot]
+REQUIREMENTS_FILES = [
+    "requirements.txt"
+]
+NEWER_MAJOR_SEMVERSION_SEVERITY = "medium"
+NEWER_MINOR_SEMVERSION_SEVERITY = "none"
+NEWER_PATCH_SEMVERSION_SEVERITY = "none"
+IGNORE_BELOW_SEVERITY = "low"
+REPORT_FILE = "reports/piprot-report.json"
+
+[python-safety]
+REQUIREMENTS_FILES = [
+    "requirements.txt"
+]
+IGNORE_BELOW_SEVERITY = "medium"
+REPORT_FILE = "reports/safety-report.json"
+
+[semgrep]
+PRINT_TIMING_INFO = true
+REPORT_FILE = "reports/semgrep-report.json"
+EXCLUDE = [
+    "tests",
+    "tests-integration"
+]
+CONFIGS = [
+    "p/ci",
+    "p/python",
+    "r/python"
+]
+
+[trufflehog]
+SOURCE = "."
+REPORT_FILE = "reports/truffleHog-report.json"
+
+[python-cyclonedx]
+REQUIREMENTS_FILE = "requirements.txt"
+REPORT_FILE = "reports/python-cyclonedx-bom.json"
+
+# ========================================
+# REPORT CONFIG
+# ========================================
+[console]
+PRINT_SUMMARY_ONLY = true
+
+[json]
+REPORT_FILE = "reports/eze_report.json"
+
+# ========================================
+# SCAN CONFIG
+# ========================================
+[scan]
+tools = ["python-piprot", "python-bandit", "python-safety", "python-cyclonedx", "trufflehog"]
+reporters = ["json", "console"]
