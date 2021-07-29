@@ -1,5 +1,5 @@
 # Contributing to this repository
-We love contributions from everyone. By participating in this project, you agree to abide by the RiverSafe [Code Of Conduct](CODE_OF_CONDUCT.md).
+We love contributions from everyone. By participating in this project, you agree to abide by the RiverSafe [Code Of Conduct](https://github.com/RiverSafeUK/eze-example-plugin/blob/main/CODE_OF_CONDUCT.md).
 
 We expect everyone (including maintainers) to follow the code of conduct anywhere in RiverSafe's project codebases, issue trackers, chatrooms, and mailing lists.
 
@@ -7,8 +7,8 @@ We expect everyone (including maintainers) to follow the code of conduct anywher
 Before you begin:
 
 - Eze Cli and it's sub-repos are powered by python and docker, make sure you have the latest versions installed
-- Have you read the [Code Of Conduct](CODE_OF_CONDUCT.md)?
-- Check out the [existing issues](https://github.com/https://github.com/RiverSafeUK/eze-example-plugin/issues) to see if any issues you're interested in have already been raised
+- Have you read the [Code Of Conduct](https://github.com/RiverSafeUK/eze-example-plugin/blob/main/CODE_OF_CONDUCT.md)?
+- Check out the [existing issues](https://github.com/RiverSafeUK/eze-example-plugin/issues) to see if any issues you're interested in have already been raised
 
 ## Committing to the Project
 

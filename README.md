@@ -5,9 +5,9 @@ Eze example plugin, provides a starter project for extending the capabilities of
 # Getting Started
 
 - Eze Cli and it's sub-repos are powered by python and docker, make sure you have the latest versions installed
-- Have you read the [Contributing Guide](CONTRIBUTING.md)?
-- Have you read the [Code Of Conduct](CODE_OF_CONDUCT.md)?
-- Check out the [existing issues](https://github.com/https://github.com/RiverSafeUK/eze-example-plugin/issues) to see if any issues you're interested in have already been raised
+- Have you read the [Contributing Guide](https://github.com/RiverSafeUK/eze-example-plugin/blob/main/CONTRIBUTING.md)?
+- Have you read the [Code Of Conduct](https://github.com/RiverSafeUK/eze-example-plugin/blob/main/CODE_OF_CONDUCT.md)?
+- Check out the [existing issues](https://github.com/RiverSafeUK/eze-example-plugin/issues) to see if any issues you're interested in have already been raised
 
 # Build and Test
 
@@ -34,4 +34,4 @@ eze reporters list
 
 # Contribute
 
-See [CONTRIBUTING GUIDE](CONTRIBUTING.md)
+See [CONTRIBUTING GUIDE](https://github.com/RiverSafeUK/eze-example-plugin/blob/main/CONTRIBUTING.md)
