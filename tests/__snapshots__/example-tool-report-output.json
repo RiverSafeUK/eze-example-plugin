@@ -1,0 +1,24 @@
+{
+  "bom": null,
+  "run_details": {},
+  "summary": {},
+  "tool": null,
+  "vulnerabilities": [
+    {
+      "confidence": "",
+      "file_location": null,
+      "identifiers": {},
+      "is_ignored": false,
+      "language": "",
+      "metadata": null,
+      "name": "Some High Vulnerability",
+      "overview": "",
+      "recommendation": "",
+      "references": [],
+      "severity": "high",
+      "version": "",
+      "vulnerability_type": "generic"
+    }
+  ],
+  "warnings": []
+}

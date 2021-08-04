@@ -11,7 +11,6 @@ from eze.core.tool import (
     Vulnerability,
 )
 from eze.utils.io import create_tempfile_path
-
 from src import __version__
 
 

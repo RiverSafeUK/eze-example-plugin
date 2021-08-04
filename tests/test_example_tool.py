@@ -5,7 +5,9 @@ from eze.core.tool import (
 )
 
 import pytest
+import os
 import json
+from pathlib import Path
 from unittest import mock
 from io import StringIO
 import sys
@@ -19,25 +21,11 @@ class TestExampleTool:
         assert output == expected_output
 
     @pytest.mark.asyncio
-    async def test_run_scan(self):
+    async def test_run_scan(self, snapshot):
         """Test if the results from running the scan were successfully extracted and parsed"""
         testee = ExampleTool()
         report = await testee.run_scan()
         report_str = json.dumps(report, default=vars, indent=2, sort_keys=True)
-        mocked_snapshot = ScanResult(
-            {
-                "vulnerabilities": [
-                    Vulnerability(
-                        {
-                            "name": "Some High Vulnerability",
-                            "severity": "high",
-                        }
-                    )
-                ],
-                "bom": None,
-                "warnings": [],
-            }
-        )
-        assert report_str == json.dumps(
-            mocked_snapshot, default=vars, indent=2, sort_keys=True
-        )
+
+        snapshot.snapshot_dir = "tests/__snapshots__"
+        snapshot.assert_match(report_str, "example-tool-report-output.json")
