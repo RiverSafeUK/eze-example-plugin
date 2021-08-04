@@ -43,6 +43,11 @@ https://example.example.com"""
         #
         "CONFIG_FILE": {"type": str, "default": None},
         "SOURCE": {"type": str, "default": "."},
+        "INCLUDE_FULL_REASON": {
+            "type": bool,
+            "default": True,
+            "help_text": """Optional include the full reason in report""",
+        },
     }
 
     DEFAULT_SEVERITY = "medium"
@@ -95,5 +100,4 @@ https://example.example.com"""
                 "warnings": [],
             }
         )
-
         return report
