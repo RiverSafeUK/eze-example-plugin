@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/riversafe/DevSecOps/_apis/build/status/RiverSafeUK.eze-example-plugin?branchName=main)](https://dev.azure.com/riversafe/DevSecOps/_build/latest?definitionId=15&branchName=main)
+
 # Introduction 
 
 Eze example plugin, provides a starter project for extending the capabilities of Eze, by adding new security tools or report types.
