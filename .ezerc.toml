@@ -3,7 +3,6 @@
 # ========================================
 [python-bandit]
 SOURCE = "app"
-REPORT_FILE = "reports/bandit-report.json"
 
 [python-piprot]
 REQUIREMENTS_FILES = [
@@ -13,14 +12,12 @@ NEWER_MAJOR_SEMVERSION_SEVERITY = "medium"
 NEWER_MINOR_SEMVERSION_SEVERITY = "none"
 NEWER_PATCH_SEMVERSION_SEVERITY = "none"
 IGNORE_BELOW_SEVERITY = "low"
-REPORT_FILE = "reports/piprot-report.json"
 
 [python-safety]
 REQUIREMENTS_FILES = [
     "requirements.txt"
 ]
 IGNORE_BELOW_SEVERITY = "medium"
-REPORT_FILE = "reports/safety-report.json"
 
 [semgrep]
 PRINT_TIMING_INFO = true
