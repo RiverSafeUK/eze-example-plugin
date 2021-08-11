@@ -13,7 +13,7 @@ NEWER_MAJOR_SEMVERSION_SEVERITY = "medium"
 NEWER_MINOR_SEMVERSION_SEVERITY = "none"
 NEWER_PATCH_SEMVERSION_SEVERITY = "none"
 IGNORE_BELOW_SEVERITY = "low"
-REPORT_FILE = "/reports/python/piprot-report.json"
+REPORT_FILE = "reports/python/piprot-report.json"
 
 [python-safety]
 REQUIREMENTS_FILES = [
