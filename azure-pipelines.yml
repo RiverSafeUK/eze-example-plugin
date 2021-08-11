@@ -29,11 +29,11 @@ steps:
       pytest tests -vv --cov=src --cov-branch --cov-report=term-missing --cov-report=xml:reports/coverage/coverage.xml --junitxml=reports/xunit/test-results.xml -o junit_family=xunit1 || true
     displayName: 'Run Tests'
     
-- script: |
-    docker run --rm -e "EZE_APIKEY=$(EZE_APIKEY)" -e "BUILD_SOURCEBRANCHNAME=$(BUILD_SOURCEBRANCHNAME)" -e "BUILD_REPOSITORY_URI=$(BUILD_REPOSITORY_URI)" -v "$(pwd)":/data riversafe/eze-cli test -s ci
-  env:
-    EZE_APIKEY: $(EZE_APIKEY)
-  displayName: 'Run Eze against Example Plugin'
+  - script: |
+      docker run --rm -e "EZE_APIKEY=$(EZE_APIKEY)" -e "BUILD_SOURCEBRANCHNAME=$(BUILD_SOURCEBRANCHNAME)" -e "BUILD_REPOSITORY_URI=$(BUILD_REPOSITORY_URI)" -v "$(pwd)":/data riversafe/eze-cli test -s ci
+    env:
+      EZE_APIKEY: $(EZE_APIKEY)
+    displayName: 'Run Eze against Example Plugin'
 
   # https://docs.microsoft.com/azure/devops/pipelines/tasks/test/publish-test-results
   - task: PublishTestResults@2
