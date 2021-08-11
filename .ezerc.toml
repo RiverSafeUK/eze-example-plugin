@@ -46,6 +46,10 @@ REPORT_FILE = "../reports/python/python-cyclonedx-bom.json"
 # ========================================
 # REPORT CONFIG
 # ========================================
+[eze]
+CONSOLE_ENDPOINT = "https://lff3adj48f.execute-api.eu-west-2.amazonaws.com/staging"
+CODEBASE_ID = "fa6ed08a-e963-4534-90b9-dcc50c5aa972"
+
 [bom]
 REPORT_FILE = "../reports/python/report-cyclonedx-sbom.json"
 
