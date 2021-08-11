@@ -2,7 +2,7 @@
 # EXAMPLE PYTHON TOOL CONFIG
 # ========================================
 [python-bandit]
-SOURCE = "app"
+SOURCE = "src"
 
 [python-piprot]
 REQUIREMENTS_FILES = [
@@ -21,7 +21,6 @@ IGNORE_BELOW_SEVERITY = "medium"
 
 [semgrep]
 PRINT_TIMING_INFO = true
-REPORT_FILE = "reports/semgrep-report.json"
 EXCLUDE = [
     "tests",
     "tests-integration"
@@ -33,11 +32,9 @@ CONFIGS = [
 
 [trufflehog]
 SOURCE = "."
-REPORT_FILE = "reports/truffleHog-report.json"
 
 [python-cyclonedx]
 REQUIREMENTS_FILE = "requirements.txt"
-REPORT_FILE = "reports/python-cyclonedx-bom.json"
 
 # ========================================
 # REPORT CONFIG
@@ -45,9 +42,6 @@ REPORT_FILE = "reports/python-cyclonedx-bom.json"
 [eze]
 CONSOLE_ENDPOINT = "https://lff3adj48f.execute-api.eu-west-2.amazonaws.com/staging"
 CODEBASE_ID = "fa6ed08a-e963-4534-90b9-dcc50c5aa972"
-
-[bom]
-REPORT_FILE = "reports/report-cyclonedx-sbom.json"
 
 [console]
 PRINT_SUMMARY_ONLY = true
