@@ -7,16 +7,11 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-strategy:
-  matrix:
-    Python38:
-      python.version: '3.8'
 
 steps:
   - task: UsePythonVersion@0
     inputs:
-      versionSpec: '$(python.version)'
-    displayName: 'Use Python $(python.version)'
+      versionSpec: '3.8'
 
   - script: |
       python -m pip install --upgrade pip
@@ -28,9 +23,11 @@ steps:
       pip install -r requirements-dev.txt
       pytest tests -vv --cov=src --cov-branch --cov-report=term-missing --cov-report=xml:reports/coverage/coverage.xml --junitxml=reports/xunit/test-results.xml -o junit_family=xunit1 || true
     displayName: 'Run Tests'
-    
+
   - script: |
       chmod  o+rw ./
+      env
+      docker pull riversafe/eze-cli:latest
       docker run --rm -e "EZE_APIKEY=$(EZE_APIKEY)" -e "BUILD_SOURCEBRANCHNAME=$(BUILD_SOURCEBRANCHNAME)" -e "BUILD_REPOSITORY_URI=$(BUILD_REPOSITORY_URI)" -v "$(pwd)":/data riversafe/eze-cli test -s ci
     env:
       EZE_APIKEY: $(EZE_APIKEY)
