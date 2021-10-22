@@ -8,6 +8,7 @@
       "confidence": "",
       "file_location": null,
       "identifiers": {},
+      "is_excluded": false,
       "is_ignored": false,
       "language": "",
       "metadata": null,
