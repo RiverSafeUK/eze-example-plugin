@@ -1,6 +1,8 @@
 {
   "bom": null,
+  "fatal_errors": [],
   "run_details": {},
+  "sboms": null,
   "summary": {},
   "tool": null,
   "vulnerabilities": [
